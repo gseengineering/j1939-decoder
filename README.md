@@ -1,70 +1,92 @@
-# Getting Started with Create React App
+# J1939 Decoder
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Overview
+A web-based tool for decoding J1939 CAN (Controller Area Network) identifiers, allowing engineers and developers to break down and analyze J1939 protocol message IDs.
 
-## Available Scripts
+## Features
+- Decode J1939 CAN IDs from hexadecimal input
+- Extract and display key components:
+  - Priority
+  - Parameter Group Number (PGN)
+  - Source Address
+- Real-time decoding with intuitive user interface
 
-In the project directory, you can run:
+## Repository Information
+- **GitHub Repository**: [gseengineering/j1939-decoder](https://github.com/gseengineering/j1939-decoder)
+- **Live Demo**: [J1939 Decoder](https://gseengineering.github.io/j1939-decoder)
 
-### `npm start`
+## Technical Details
+- Built with React
+- Styled with Tailwind CSS
+- Hosted on GitHub Pages
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Development Setup
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Prerequisites
+- Node.js
+- npm (Node Package Manager)
 
-### `npm test`
+### Installation
+1. Clone the repository
+   ```bash
+   git clone https://github.com/gseengineering/j1939-decoder.git
+   cd j1939-decoder
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Install dependencies
+   ```bash
+   npm install
+   ```
 
-### `npm run build`
+3. Start development server
+   ```bash
+   npm start
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Deployment
+Deploy the project to GitHub Pages:
+```bash
+npm run deploy
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## J1939 Decoding Logic
+The decoder breaks down a J1939 CAN ID into its core components:
+- **Priority** (3 bits): Message transmission priority
+- **PGN** (18 bits): Parameter Group Number identifying the message type
+- **Source Address** (8 bits): Identifying the message origin
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Example Decoding
+Input: `0CFF0019`
+- Priority: `0x3` (3)
+- PGN: `0x0FF0` (4080)
+- Source Address: `0x19` (25)
 
-### `npm run eject`
+## Contributing
+1. Fork the repository
+2. Create a feature branch
+3. Commit changes
+4. Push to the branch
+5. Open a Pull Request
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## License
+MIT License
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Copyright (c) 2024 GSE Engineering
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
