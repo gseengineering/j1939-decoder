@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/j1939-decoder/static/css/main.5946410c.css",
+    "main.js": "/j1939-decoder/static/js/main.9f3bc740.js",
+    "static/js/453.69f3745b.chunk.js": "/j1939-decoder/static/js/453.69f3745b.chunk.js",
+    "index.html": "/j1939-decoder/index.html",
+    "main.5946410c.css.map": "/j1939-decoder/static/css/main.5946410c.css.map",
+    "main.9f3bc740.js.map": "/j1939-decoder/static/js/main.9f3bc740.js.map",
+    "453.69f3745b.chunk.js.map": "/j1939-decoder/static/js/453.69f3745b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5946410c.css",
+    "static/js/main.9f3bc740.js"
+  ]
+}
